@@ -46,5 +46,5 @@ allprojects {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72"
-    implementation "com.github.appleeducate:MidiDriver-Android-SF2:1.0"
+    implementation "com.github.appleeducate:mididriver-android-sf2:1.1"
 }
