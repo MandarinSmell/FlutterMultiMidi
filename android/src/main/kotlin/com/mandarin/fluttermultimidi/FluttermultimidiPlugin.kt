@@ -67,8 +67,9 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
             synth.open()
             synth.loadAllInstruments(sf2)
 
-            synth.channels[0].programChange(0)
-            synth.channels[1].programChange(1)
+            for(i in synth.channels.indices) {
+              synth.channels[i].programChange(i)
+            }
 
             recv = synth.receiver
           } catch (e: IOException) {

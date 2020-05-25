@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4af75354-9cf1-4139-b8a5-71d542e99d0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,39 +89,51 @@
       <option name="project" value="LOCAL" />
       <updated>1590368171331</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="release">
+      <created>1590369119772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590369119772</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="edit more" />
     <MESSAGE value="fix readme" />
     <MESSAGE value="fix mistake" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix mistake" />
+    <MESSAGE value="release" />
+    <option name="LAST_COMMIT_MESSAGE" value="release" />
   </component>
   <component name="WindowStateProjectService">
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590359589205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590359589205" />
-    <state x="102" y="118" key="CommitChangelistDialog2" timestamp="1590368170383">
+    <state x="102" y="118" key="CommitChangelistDialog2" timestamp="1590370949685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="102" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590368170383" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590368263373">
+    <state x="102" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590370949685" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590369258073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590368263373" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590369258073" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1590367710562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590367710562" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590368173089">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590369122375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590368173089" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590369122375" />
     <state x="184" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1590368065374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590368065374" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590370968920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590370968920" />
   </component>
 </project>

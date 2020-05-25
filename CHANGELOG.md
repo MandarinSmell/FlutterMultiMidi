@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Support more channels
+
 ## 1.0.0
 
 * First release
