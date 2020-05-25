@@ -1,4 +1,4 @@
-# fluttermultimidi
+# flutter_multi_midi
 
 Similar plugin with flutter_midi plugin, but it can support multiple channels with one sound font file.
 Be aware that this plugin only supports Android yet.
@@ -10,7 +10,7 @@ Be aware that this plugin only supports Android yet.
 To implement this plugin in Flutter, add this line in pubspec.yaml
 
 ```
-fluttermultimidi: ^0.0.1
+fluttermultimidi: ^1.0.0
 ```
 
 ### Example
