@@ -1,6 +1,10 @@
+## 1.0.7
+
+* Testing reasoning problem
+
 ## 1.0.6
 
-* Added manual velocity adjusting feature
+* Added manual volume adjusting feature
 
 ## 1.0.5
 
