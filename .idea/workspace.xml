@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4af75354-9cf1-4139-b8a5-71d542e99d0e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/mandarin/fluttermultimidi/FluttermultimidiPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/mandarin/fluttermultimidi/FluttermultimidiPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fluttermultimidi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_multi_midi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fluttermultimidi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/fluttermultimidi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590367465276</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix mistake">
+      <created>1590368171328</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590368171331</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -103,22 +104,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590359589205" />
-    <state x="102" y="118" key="CommitChangelistDialog2" timestamp="1590368147037">
+    <state x="102" y="118" key="CommitChangelistDialog2" timestamp="1590368170383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="102" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590368147037" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590366898946">
+    <state x="102" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590368170383" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590368263373">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590366898946" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590368263373" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1590367710562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590367710562" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590367466949">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590368173089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590367466949" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590368173089" />
     <state x="184" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1590368065374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
