@@ -1,9 +1,12 @@
 package com.mandarin.fluttermultimidi
 
-import androidx.annotation.NonNull;
+import android.os.Build
+import androidx.annotation.NonNull
+import cn.sherlock.com.sun.media.sound.SF2Instrument
 import cn.sherlock.com.sun.media.sound.SF2Soundbank
 import cn.sherlock.com.sun.media.sound.SoftSynthesizer
-
+import cn.sherlock.javax.sound.sampled.AudioFormat
+import cn.sherlock.javax.sound.sampled.SourceDataLine
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -15,117 +18,124 @@ import jp.kshoji.javax.sound.midi.Receiver
 import jp.kshoji.javax.sound.midi.ShortMessage
 import java.io.File
 import java.io.IOException
-import java.lang.Exception
 
 /** FluttermultimidiPlugin */
-public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
-  /// The MethodChannel that will the communication between Flutter and native Android
-  ///
-  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
-  /// when the Flutter Engine is detached from the Activity
-  private lateinit var channel : MethodChannel
-  private lateinit var synth : SoftSynthesizer
-  private lateinit var recv : Receiver
+public class FluttermultimidiPlugin : FlutterPlugin, MethodCallHandler {
+    private lateinit var channel: MethodChannel
+    private lateinit var synth: SoftSynthesizer
+    private lateinit var recv: Receiver
 
-  private var sf2Channel = 0
+    private var sf2Channel = 0
 
-  override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "flutter_multi_midi")
-    channel.setMethodCallHandler(this);
-  }
-
-  // This static function is optional and equivalent to onAttachedToEngine. It supports the old
-  // pre-Flutter-1.12 Android projects. You are encouraged to continue supporting
-  // plugin registration via this function while apps migrate to use the new Android APIs
-  // post-flutter-1.12 via https://flutter.dev/go/android-project-migration.
-  //
-  // It is encouraged to share logic between onAttachedToEngine and registerWith to keep
-  // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
-  // depending on the user's project. onAttachedToEngine or registerWith must both be defined
-  // in the same class.
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "flutter_multi_midi")
-      channel.setMethodCallHandler(FluttermultimidiPlugin())
+    override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+        channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "flutter_multi_midi")
+        channel.setMethodCallHandler(this)
     }
-  }
 
-  override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-    when (call.method) {
-        "getPlatformVersion" -> {
-          result.success("Android ${android.os.Build.VERSION.RELEASE}")
+    companion object {
+        @JvmStatic
+        fun registerWith(registrar: Registrar) {
+            val channel = MethodChannel(registrar.messenger(), "flutter_multi_midi")
+            channel.setMethodCallHandler(FluttermultimidiPlugin())
         }
-        "loadSf2" -> {
-          try {
-            val path = call.argument("path") as String? ?: return
-            val f = File(path)
+    }
 
-            val sf2 = SF2Soundbank(f)
-
-            synth = SoftSynthesizer()
-            synth.open()
-            synth.loadAllInstruments(sf2)
-
-            for(i in synth.channels.indices) {
-              synth.channels[i].programChange(i)
+    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+        when (call.method) {
+            "getPlatformVersion" -> {
+                result.success("Android ${Build.VERSION.RELEASE}")
             }
+            "loadSf2" -> {
+                try {
+                    val path = call.argument("path") as String? ?: return
+                    val midi = call.argument("midiNumber") as Int? ?: 16
+                    val f = File(path)
 
-            recv = synth.receiver
-          } catch (e: IOException) {
-            e.printStackTrace()
-          } catch (e: Exception) {
-            e.printStackTrace()
-          }
+                    val sf2 = SF2Soundbank(f)
+
+                    synth = SoftSynthesizer()
+
+                    val info = hashMapOf(
+                            "interpolation" to "sinc",
+                            "control rate" to 147f,
+                            "format" to AudioFormat(44100f, 16, 2, true, false),
+                            "latency" to 120000L,
+                            "device id" to 0,
+                            "max polyphony" to 64,
+                            "reverb" to true,
+                            "chorus" to false,
+                            "auto gain control" to true,
+                            "large mode" to false,
+                            "midi channels" to midi,
+                            "jitter correction" to true,
+                            "light reverb" to true,
+                            "load default soundbank" to true
+                    )
+
+                    synth.open(null, info)
+                    synth.loadAllInstruments(sf2)
+
+                    for (i in synth.channels.indices) {
+                        synth.channels[i].programChange(i)
+                    }
+
+                    recv = synth.receiver
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+            "changeChannel" -> {
+                var ch = call.argument("channel") as Int? ?: 0
+
+                if (ch < 0) {
+                    ch = 0
+                } else if (ch >= synth.channels.size) {
+                    ch = synth.channels.size - 1
+                }
+
+                sf2Channel = ch
+            }
+            "playNote" -> {
+                val n = call.argument("note") as Int? ?: return
+                val v = call.argument("vel") as Int? ?: 127
+
+                try {
+                    val msg = ShortMessage()
+
+                    msg.setMessage(ShortMessage.NOTE_ON, sf2Channel, n, v)
+
+                    recv.send(msg, -1)
+                } catch (e: InvalidMidiDataException) {
+                    e.printStackTrace()
+                }
+            }
+            "stopNote" -> {
+                val n = call.argument("note") as Int? ?: return
+                val v = call.argument("vel") as Int? ?: 127
+
+                try {
+                    val msg = ShortMessage()
+
+                    msg.setMessage(ShortMessage.NOTE_OFF, sf2Channel, n, v)
+
+                    recv.send(msg, -1)
+                } catch (e: InvalidMidiDataException) {
+                    e.printStackTrace()
+                }
+            }
+            "getChannelSize" -> {
+                val c = synth.channels.size
+
+                println("Channel Size : $c")
+
+                result.success(c)
+            }
         }
-        "changeChannel" -> {
-          var ch = call.argument("channel") as Int? ?: 0
-
-          if(ch < 0) {
-            ch = 0
-          } else if(ch >= synth.channels.size) {
-            ch = synth.channels.size-1
-          }
-
-          sf2Channel = ch
-        }
-        "playNote" -> {
-          val n = call.argument("note") as Int? ?: return
-          val v = call.argument("vel") as Int? ?: 127
-
-          try {
-            val msg = ShortMessage()
-
-            msg.setMessage(ShortMessage.NOTE_ON, sf2Channel, n, v)
-
-            recv.send(msg, -1)
-          } catch (e: InvalidMidiDataException) {
-            e.printStackTrace()
-          }
-        }
-        "stopNote" -> {
-          val n = call.argument("note") as Int? ?: return
-          val v = call.argument("vel") as Int? ?: 127
-
-          try {
-            val msg = ShortMessage()
-
-            msg.setMessage(ShortMessage.NOTE_OFF, sf2Channel, n, v)
-
-            recv.send(msg, -1)
-          } catch (e: InvalidMidiDataException) {
-            e.printStackTrace()
-          }
-        }
-      "getChannelSize" -> {
-        val c = synth.channels.size
-
-        result.success(c)
-      }
     }
-  }
 
-  override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
-    channel.setMethodCallHandler(null)
-  }
+    override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+        channel.setMethodCallHandler(null)
+    }
 }

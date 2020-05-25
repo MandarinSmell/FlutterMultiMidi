@@ -1,3 +1,7 @@
+## 1.0.11
+
+* Added manual midi channel number adjusting feature
+
 ## 1.0.10
 
 * Added channel size checking feature
