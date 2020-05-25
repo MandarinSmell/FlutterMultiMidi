@@ -1,6 +1,10 @@
+## 1.0.5
+
+* Try to fix sound reasoning
+
 ## 1.0.4
 
-* Try to weird dependency missing problem
+* Fixed weird dependency missing problem
 
 ## 1.0.3
 ## 1.0.2

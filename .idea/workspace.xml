@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4af75354-9cf1-4139-b8a5-71d542e99d0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/mandarin/fluttermultimidi/FluttermultimidiPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/mandarin/fluttermultimidi/FluttermultimidiPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590372915374</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="get pub">
+      <created>1590373803072</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1590373803072</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,14 +162,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590359589205" />
-    <state x="102" y="118" width="1429" height="811" key="CommitChangelistDialog2" timestamp="1590372914701">
+    <state x="102" y="118" width="1429" height="811" key="CommitChangelistDialog2" timestamp="1590373802464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="102" y="118" width="1429" height="811" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590372914701" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590372959837">
+    <state x="102" y="118" width="1429" height="811" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590373802464" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590373850005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590372959837" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590373850005" />
     <state width="1877" height="239" key="GridCell.Tab.0.bottom" timestamp="1590371654330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -178,10 +190,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590367710562" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590372920768">
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590373804302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590372920768" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590373804302" />
     <state x="184" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1590368065374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
