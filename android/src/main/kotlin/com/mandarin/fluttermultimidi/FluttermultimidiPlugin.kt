@@ -30,7 +30,7 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
   private var sf2Channel = 0
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "fluttermultimidi")
+    channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "flutter_multi_midi")
     channel.setMethodCallHandler(this);
   }
 
@@ -46,7 +46,7 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "fluttermultimidi")
+      val channel = MethodChannel(registrar.messenger(), "flutter_multi_midi")
       channel.setMethodCallHandler(FluttermultimidiPlugin())
     }
   }

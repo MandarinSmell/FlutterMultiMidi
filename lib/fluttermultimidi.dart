@@ -7,7 +7,7 @@ import 'cache.dart';
 
 class FlutterMultiMidi {
   static const MethodChannel _channel =
-      const MethodChannel('fluttermultimidi');
+      const MethodChannel('flutter_multi_midi');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
