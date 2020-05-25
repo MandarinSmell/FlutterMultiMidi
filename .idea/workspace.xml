@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4af75354-9cf1-4139-b8a5-71d542e99d0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,29 +52,44 @@
       <option name="project" value="LOCAL" />
       <updated>1590366109686</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix readme">
+      <created>1590366794328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590366794328</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix readme">
+      <created>1590366818876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590366818876</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="edit more" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit more" />
+    <MESSAGE value="fix readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590359589205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590359589205" />
-    <state x="102" y="118" key="CommitChangelistDialog2" timestamp="1590366793618">
+    <state x="102" y="118" key="CommitChangelistDialog2" timestamp="1590366818185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="102" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590366793618" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590363257387">
+    <state x="102" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590366818185" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590366898946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590363257387" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590366795442">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590366898946" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590366820424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590366795442" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590366820424" />
   </component>
 </project>

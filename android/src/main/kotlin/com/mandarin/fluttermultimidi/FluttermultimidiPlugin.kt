@@ -105,7 +105,7 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
           val n = call.argument("note") as Int? ?: return
 
           try {
-            val msg = ShortMesage()
+            val msg = ShortMessage()
 
             msg.setMessage(ShortMessage.NOTE_OFF, sf2Channel, n, 127)
 
