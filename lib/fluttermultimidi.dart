@@ -33,14 +33,14 @@ class FlutterMultiMidi {
     return r;
   }
 
-  Future<String> playNote({@required int note}) async {
-    final String r = await _channel.invokeMethod("playNote", {"note" : note});
+  Future<String> playNote({@required int note, int vel}) async {
+    final String r = await _channel.invokeMethod("playNote", {"note" : note, "vel" : vel});
 
     return r;
   }
 
-  Future<String> stopNote({@required int note}) async {
-    final String r = await _channel.invokeMethod("stopNote", {"note" : note});
+  Future<String> stopNote({@required int note, int vel}) async {
+    final String r = await _channel.invokeMethod("stopNote", {"note" : note, "vel" : vel});
 
     return r;
   }

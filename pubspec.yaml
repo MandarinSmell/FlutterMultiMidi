@@ -1,6 +1,6 @@
 name: fluttermultimidi
 description: Similar plugin with flutter_midi plugin, but it can support multiple channel with one sound font file.
-version: 1.0.5
+version: 1.0.6
 author: MandarinSmell
 homepage: https://github.com/MandarinSmell/FlutterMultiMidi.git
 

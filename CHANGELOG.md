@@ -1,3 +1,7 @@
+## 1.0.6
+
+* Added manual velocity adjusting feature
+
 ## 1.0.5
 
 * Try to fix sound reasoning

@@ -90,12 +90,13 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
           sf2Channel = ch
         }
         "playNote" -> {
-          val n = call.argument("note") as Int? ?: 60
+          val n = call.argument("note") as Int? ?: return
+          val v = call.argument("vel") as Int? ?: 127
 
           try {
             val msg = ShortMessage()
 
-            msg.setMessage(ShortMessage.NOTE_ON, sf2Channel, n)
+            msg.setMessage(ShortMessage.NOTE_ON, sf2Channel, n, v)
 
             recv.send(msg, -1)
           } catch (e: InvalidMidiDataException) {
@@ -104,11 +105,12 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
         }
         "stopNote" -> {
           val n = call.argument("note") as Int? ?: return
+          val v = call.argument("vel") as Int? ?: 127
 
           try {
             val msg = ShortMessage()
 
-            msg.setMessage(ShortMessage.NOTE_OFF, sf2Channel, n)
+            msg.setMessage(ShortMessage.NOTE_OFF, sf2Channel, n, v)
 
             recv.send(msg, -1)
           } catch (e: InvalidMidiDataException) {
