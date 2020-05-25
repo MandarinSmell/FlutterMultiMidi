@@ -10,7 +10,7 @@ Be aware that this plugin only supports Android yet.
 To implement this plugin in Flutter, add this line in pubspec.yaml
 
 ```
-fluttermultimidi: ^1.0.7
+fluttermultimidi: ^1.0.8
 ```
 
 ### Example
