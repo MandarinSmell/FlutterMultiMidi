@@ -1,3 +1,7 @@
+## 1.0.13
+
+* Try to fix maximum midi number problem
+
 ## 1.0.12
 
 * Added logging feature about loadSf2 method

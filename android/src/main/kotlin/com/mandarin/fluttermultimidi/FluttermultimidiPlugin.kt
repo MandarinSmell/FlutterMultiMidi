@@ -108,7 +108,7 @@ public class FluttermultimidiPlugin : FlutterPlugin, MethodCallHandler {
                 try {
                     val msg = ShortMessage()
 
-                    msg.setMessage(ShortMessage.NOTE_ON, sf2Channel, n, v)
+                    msg.setMessage((ShortMessage.NOTE_ON and 0xf0) or (sf2Channel and 0x0f), n, v)
 
                     recv.send(msg, -1)
                 } catch (e: InvalidMidiDataException) {
@@ -122,7 +122,7 @@ public class FluttermultimidiPlugin : FlutterPlugin, MethodCallHandler {
                 try {
                     val msg = ShortMessage()
 
-                    msg.setMessage(ShortMessage.NOTE_OFF, sf2Channel, n, v)
+                    msg.setMessage((ShortMessage.NOTE_OFF and 0xf0) or (sf2Channel and 0x0f), n, v)
 
                     recv.send(msg, -1)
                 } catch (e: InvalidMidiDataException) {
