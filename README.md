@@ -5,7 +5,7 @@ Be aware that this plugin only supports Android yet.
 
 ## Getting Started
 
-###Implementation
+### Implementation
 
 To implement this plugin in Flutter, add this line in pubspec.yaml
 
@@ -13,7 +13,7 @@ To implement this plugin in Flutter, add this line in pubspec.yaml
 flutter_multi_midi: ^0.0.1
 ```
 
-###Example
+### Example
 
 Let's assume that you put "instrument.sf2" file in "assets/" folder
 Then you have to add this line in pubspec.yaml
