@@ -16,7 +16,7 @@ class FlutterMultiMidi {
 
   /// Load [sf2] file with specified byte data.<br>
   /// This method will create sf2 file in temporary directory and load sf2 with OS internal codes
-  Future<String> loadSf2({@required ByteData sf2, String name = "instrument.sf2", int midi = 0}) async {
+  Future<String> loadSf2({@required ByteData sf2, String name = "instrument.sf2", int midi = 16}) async {
     if(kIsWeb)
       return _channel.invokeMethod("loadSf2");
 

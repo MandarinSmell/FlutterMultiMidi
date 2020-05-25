@@ -1,3 +1,7 @@
+## 1.0.12
+
+* Added logging feature about loadSf2 method
+
 ## 1.0.11
 
 * Added manual midi channel number adjusting feature

@@ -55,20 +55,22 @@ public class FluttermultimidiPlugin : FlutterPlugin, MethodCallHandler {
 
                     synth = SoftSynthesizer()
 
+                    val m: Int = Integer.valueOf(midi)
+
                     val info = hashMapOf(
                             "interpolation" to "sinc",
                             "control rate" to 147f,
                             "format" to AudioFormat(44100f, 16, 2, true, false),
                             "latency" to 120000L,
                             "device id" to 0,
-                            "max polyphony" to 64,
-                            "reverb" to true,
+                            "max polyphony" to Integer.valueOf(64),
+                            "reverb" to false,
                             "chorus" to false,
                             "auto gain control" to true,
                             "large mode" to false,
-                            "midi channels" to midi,
+                            "midi channels" to m,
                             "jitter correction" to true,
-                            "light reverb" to true,
+                            "light reverb" to false,
                             "load default soundbank" to true
                     )
 
@@ -80,6 +82,8 @@ public class FluttermultimidiPlugin : FlutterPlugin, MethodCallHandler {
                     }
 
                     recv = synth.receiver
+
+                    result.success("Method succeeded. Requested midi number : $midi | Real midi number : "+ synth.channels.size)
                 } catch (e: IOException) {
                     e.printStackTrace()
                 } catch (e: Exception) {
