@@ -10,7 +10,7 @@ Be aware that this plugin only supports Android yet.
 To implement this plugin in Flutter, add this line in pubspec.yaml
 
 ```
-fluttermultimidi: ^1.0.9
+fluttermultimidi: ^1.0.10
 ```
 
 ### Example
@@ -48,4 +48,10 @@ When there are several channels in sound font file, you can change channel like 
 
 ```
 midi.changeChannel(channel: 1);
+```
+
+If you wonder how many channels there are in sf2 file, you can call this method
+
+```
+midi.getChannelSize();
 ```

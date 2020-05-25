@@ -117,6 +117,11 @@ public class FluttermultimidiPlugin: FlutterPlugin, MethodCallHandler {
             e.printStackTrace()
           }
         }
+      "getChannelSize" -> {
+        val c = synth.channels.size
+
+        result.success(c)
+      }
     }
   }
 
